@@ -13,4 +13,4 @@ My name is Monika Łękawa. I am 5th year student of AGH University in Cracow �
 
 [Bags report](https://docs.google.com/document/d/1Yk8m3P67lX47-z0N-UDBbCtPyitpnpixhf3T04R2rBA/edit)
 
-[Simple UX/UI in Figma](https://www.figma.com/file/T8L3R5ugVh0La2rt5EcxiY/KLT---Wst%C4%99p-do-projektowania-interfejs%C3%B3w?type=design&node-id=302%3A998&mode=design&t=orXgsYTIPQwZGHlr-1)
+[Simple UX/UI in Figma](https://www.figma.com/file/NEC3SKjTlGM8lvjmgpOCzc/Untitled?type=design&node-id=0%3A1&mode=design&t=K0mpwiXbGNZMC3zS-1)
