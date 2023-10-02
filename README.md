@@ -16,6 +16,6 @@ My name is Monika Łękawa. I am 5th year student of AGH University in Cracow �
 [Test report](https://docs.google.com/document/d/10ZMcqrl3MGtcbbIYhZu9EmGRi-nyrCau2kxEbl5meJ8/edit)
 
 [Simple UX/UI in Figma](https://www.figma.com/file/NEC3SKjTlGM8lvjmgpOCzc/Untitled?type=design&node-id=0%3A1&mode=design&t=K0mpwiXbGNZMC3zS-1)
-#Languages 
+# Languages 💬
 - polish native
 - english B2+
