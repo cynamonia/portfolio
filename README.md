@@ -5,9 +5,9 @@ My name is Monika Łękawa. I am 5th year student of AGH University in Cracow �
 - Jira
 - Git
 - Postman
-- Python
+- Gherkin
+- TestRail
 - Figma
-- Adobe Illustrator
 # My projects 👩‍💻
 [Test Plan](https://docs.google.com/document/d/1B5UJg4-eCPm_6FpWQuVMKrK1nj1P-xvUEhQpnnxnzgA/edit)
 
