@@ -8,7 +8,7 @@ My name is Monika Łękawa. I am 5th year student of AGH University in Cracow �
 - Gherkin
 - TestRail
 - Figma
-# My projects 👩‍💻
+# Projects 👩‍💻
 [Test Plan](https://docs.google.com/document/d/1B5UJg4-eCPm_6FpWQuVMKrK1nj1P-xvUEhQpnnxnzgA/edit)
 
 [Test cases](https://docs.google.com/document/d/1GNS2NUHkVvs2CURZO5LNM7HQoLR9y5kLJKywAvSyENk/edit?usp=sharing)
