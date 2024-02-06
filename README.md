@@ -25,3 +25,4 @@ My name is Monika Łękawa. I am 5th year student of AGH University in Cracow �
 # Languages 💬
 - polish native
 - english B2+
+- german A2
