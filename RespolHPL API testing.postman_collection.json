@@ -1,0 +1,1009 @@
+{
+	"info": {
+		"_postman_id": "58667e39-4420-4343-80f0-7d6ae46c4eec",
+		"name": "RespolHPL API testing",
+		"description": "## Introduction\n\nRespolHPL is an e-commerce where you can buy laminates, compact laminates and kitchen accessories.\n\nDocumentation for REST API endpoints used in this collection can be found [here.](https://woocommerce.github.io/woocommerce-rest-api-docs/#)\n\nAll the requests referenced in the documentation start with [https://respolhpl-sklep.pl/wp-json/wc/v3](https://respolhpl-sklep.pl/wp-json/wc/v3)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31698937",
+		"_collection_link": "https://orange-space-900441.postman.co/workspace/3bf00d99-3ba9-42bd-8b8c-3dcb6367414c/collection/31698937-58667e39-4420-4343-80f0-7d6ae46c4eec?action=share&source=collection_link&creator=31698937"
+	},
+	"item": [
+		{
+			"name": "Filtering products",
+			"item": [
+				{
+					"name": "FilteringByPrice",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" pm.response.json().forEach(object => {",
+									"        pm.test(`price for id ${object.id}`, () => {",
+									"        pm.expect(object.price).to.be.a(\"string\");",
+									"        pm.expect(parseFloat(object.price)).to.be.above(39)",
+									"        pm.expect(parseFloat(object.price)).to.be.below(40)",
+									"    });",
+									"    }",
+									"    )",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?min_price=39&max_price=40",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "min_price",
+									"value": "39"
+								},
+								{
+									"key": "max_price",
+									"value": "40"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllCategories",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products/categories?hide_empty=true",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "hide_empty",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FilteringAkcesoriaGTV",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?category=91&order=asc",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "91"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Set of requests that are filtering products by price and categories."
+		},
+		{
+			"name": "Sorting products",
+			"item": [
+				{
+					"name": "SortingByPriceDesc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?order=desc&orderby=price",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "desc"
+								},
+								{
+									"key": "orderby",
+									"value": "price"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SortingByPriceAsc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?order=asc&orderby=price",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "orderby",
+									"value": "price"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SortingByDate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?orderby=date&order=desc",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "orderby",
+									"value": "date"
+								},
+								{
+									"key": "order",
+									"value": "desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SortingByPopularity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?orderby=popularity",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "orderby",
+									"value": "popularity"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Set of requests that are sorting products by price, date and popularity."
+		},
+		{
+			"name": "Searching products",
+			"item": [
+				{
+					"name": "SearchingProductByName",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 2s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?search=Antybakteryjna Deska do krojenia Nero",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Antybakteryjna Deska do krojenia Nero"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchingProductByCategory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 3s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(3000);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?search=Kompakt HPL",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Kompakt HPL"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Set of requests that are searching products by name and category."
+		},
+		{
+			"name": "Stock status",
+			"item": [
+				{
+					"name": "In stock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?stock_status=instock",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "stock_status",
+									"value": "instock"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Out of stock",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?stock_status=outofstock",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "stock_status",
+									"value": "outofstock"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "On back order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?stock_status=onbackorder",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "stock_status",
+									"value": "onbackorder"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EditProductQuantity",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{API-secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{API-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"stock_quantity\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/products/956",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"956"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Set of requests that are checking products by stock status and editing product details."
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "ProductVariations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 1s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{API-secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{API-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products/924/variations",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"924",
+								"variations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductDetails",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 1s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{API-secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{API-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products/1129",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"1129"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListOfProducts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 5s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{API-secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{API-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?order=asc&orderby=price&per_page=100",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "orderby",
+									"value": "price"
+								},
+								{
+									"key": "per_page",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProduct",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const getData = () => pm.response.json();",
+									"",
+									"pm.test('Returns a product', () => {",
+									"    const data = getData();",
+									"    pm.expect(data).to.have.property('name');",
+									"    pm.expect(data).to.have.property('type');",
+									"    pm.expect(data).to.have.property('status');",
+									"    pm.expect(data).to.have.property('description');",
+									"    pm.expect(data).to.have.property('price');",
+									"    pm.expect(data).to.have.property('stock_quantity');",
+									"    pm.expect(data).to.have.property('manage_stock');",
+									"",
+									"    pm.expect(data.name).to.be.a('string');",
+									"    pm.expect(data.type).to.be.a('string');",
+									"    pm.expect(data.price).to.be.a('string');",
+									"    pm.expect(data.description).to.be.a('string');",
+									"    pm.expect(data.status).to.be.a('string');",
+									"    pm.expect(data.stock_quantity).to.be.a('number');",
+									"    pm.expect(data.manage_stock).to.be.a('boolean');",
+									"});",
+									"",
+									"pm.test(\"Return correct details for Scrabble product\", () => {",
+									"    const data = getData();",
+									"",
+									"    // Check expected values are present",
+									"    pm.expect(data.name).to.eql(\"Scrabble\");",
+									"    pm.expect(data.stock_quantity).to.eql(20);",
+									"    pm.expect(data.price).to.eql(\"110.99\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Scrabble\",\n    \"type\": \"simple\",\n    \"regular_price\": \"110.99\",\n    \"stock_status\": \"instock\",\n    \"stock_quantity\": 20,\n    \"manage_stock\": true,\n    \"description\": \"This is a great game for intelligent people. And not intelligent too.\",\n    \"short_description\": \"\",\n    \"categories\": [],\n    \"images\": [\n        {\n            \"src\": \"https://img.kwcdn.com/product/1ea26cc11a/2f3db553-31ac-423d-bba0-190b96004e50_1000x1000.jpeg?imageView2/2/w/800/q/70\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/products",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products/1495",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"1495"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":\"private\",\n    \"regular_price\":\"12.73\",\n    \"virtual\": true,\n    \"stock_quantity\": 21\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/products/1497",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"1497"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Set of requests that are calling list of products, product variations and details. This folder also contains the request to create, edit and delete a product."
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Orders",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{API-secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{API-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/orders",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PurchasingManyItems",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"payment_method\": \"bacs\",\n    \"payment_method_title\": \"Przelew bankowy\",\n    \"set_paid\": false,\n    \"billing\": {\n        \"first_name\": \"John\",\n        \"last_name\": \"Doe\",\n        \"address_1\": \"969 Market\",\n        \"address_2\": \"\",\n        \"city\": \"San Francisco\",\n        \"state\": \"CA\",\n        \"postcode\": \"94103\",\n        \"country\": \"US\",\n        \"email\": \"john.doe@example.com\",\n        \"phone\": \"(555) 555-5555\"\n    },\n    \"shipping\": {\n        \"first_name\": \"John\",\n        \"last_name\": \"Doe\",\n        \"address_1\": \"969 Market\",\n        \"address_2\": \"\",\n        \"city\": \"San Francisco\",\n        \"state\": \"CA\",\n        \"postcode\": \"94103\",\n        \"country\": \"US\"\n    },\n    \"line_items\": [\n        {\n            \"product_id\": 1437,\n            \"quantity\": 15\n        }\n    ],\n    \"shipping_lines\": [\n        {\n            \"method_id\": \"flat_rate\",\n            \"method_title\": \"Flat Rate\",\n            \"total\": \"10.00\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/orders",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PurchasingDifferentItems",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"payment_method\": \"bacs\",\n    \"payment_method_title\": \"Przelew bankowy\",\n    \"set_paid\": false,\n    \"billing\": {\n        \"first_name\": \"John\",\n        \"last_name\": \"Doe\",\n        \"address_1\": \"969 Market\",\n        \"address_2\": \"\",\n        \"city\": \"San Francisco\",\n        \"state\": \"CA\",\n        \"postcode\": \"94103\",\n        \"country\": \"US\",\n        \"email\": \"john.doe@example.com\",\n        \"phone\": \"(555) 555-5555\"\n    },\n    \"shipping\": {\n        \"first_name\": \"John\",\n        \"last_name\": \"Doe\",\n        \"address_1\": \"969 Market\",\n        \"address_2\": \"\",\n        \"city\": \"San Francisco\",\n        \"state\": \"CA\",\n        \"postcode\": \"94103\",\n        \"country\": \"US\"\n    },\n    \"line_items\": [\n        {\n            \"product_id\": 1437,\n            \"quantity\": 1\n        },\n        {\n            \"product_id\": 1395,\n            \"quantity\": 1\n        },\n        {\n            \"product_id\": 1316,\n            \"quantity\": 2\n        },\n        {\n            \"product_id\": 923,\n            \"variation_id\": 940,\n            \"quantity\": 4\n        }\n    ],\n    \"shipping_lines\": [\n        {\n            \"method_id\": \"flat_rate\",\n            \"method_title\": \"Flat Rate\",\n            \"total\": \"10.00\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/orders",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FulfillOrder",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": \"completed\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/orders/1501",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"orders",
+								"1501"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Set of requests that are purchasing items (multiple units of the same item and also different items) and the request to calling list of orders."
+		},
+		{
+			"name": "Paging",
+			"item": [
+				{
+					"name": "PagingByPriceAsc",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 2s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{API-secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{API-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?per_page=25&page=2&order=asc&orderby=price",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": "25"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "orderby",
+									"value": "price"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PagingByPopularityDesc",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 2s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?page=3&order=desc&orderby=popularity",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								},
+								{
+									"key": "order",
+									"value": "desc"
+								},
+								{
+									"key": "orderby",
+									"value": "popularity"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Set of requests that are testing a paging feature."
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "{{API-secret}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{API-key}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API-key",
+			"value": "key",
+			"type": "string"
+		},
+		{
+			"key": "API-secret",
+			"value": "password",
+			"type": "string"
+		},
+		{
+			"key": "URL",
+			"value": "https://respolhpl-sklep.pl/wp-json/wc/v3",
+			"type": "string"
+		}
+	]
+}
