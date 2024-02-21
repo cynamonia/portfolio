@@ -9,7 +9,7 @@
 	},
 	"item": [
 		{
-			"name": "Filtering products",
+			"name": "Filtering products feature testsuite",
 			"item": [
 				{
 					"name": "FilteringByPrice",
@@ -123,7 +123,7 @@
 			"description": "Set of requests that are filtering products by price and categories."
 		},
 		{
-			"name": "Sorting products",
+			"name": "Sorting products feature testsuite",
 			"item": [
 				{
 					"name": "SortingByPriceDesc",
@@ -233,7 +233,7 @@
 			"description": "Set of requests that are sorting products by price, date and popularity."
 		},
 		{
-			"name": "Searching products",
+			"name": "Searching products feature testsuite",
 			"item": [
 				{
 					"name": "SearchingProductByName",
@@ -315,7 +315,7 @@
 			"description": "Set of requests that are searching products by name and category."
 		},
 		{
-			"name": "Stock status",
+			"name": "Stock status feature testsuite",
 			"item": [
 				{
 					"name": "In stock",
@@ -443,7 +443,7 @@
 			"description": "Set of requests that are checking products by stock status and editing product details."
 		},
 		{
-			"name": "Products",
+			"name": "Products feature testsuite",
 			"item": [
 				{
 					"name": "ProductVariations",
@@ -711,7 +711,7 @@
 			"description": "Set of requests that are calling list of products, product variations and details. This folder also contains the request to create, edit and delete a product."
 		},
 		{
-			"name": "Orders",
+			"name": "Orders feature testsuite",
 			"item": [
 				{
 					"name": "Orders",
@@ -836,12 +836,20 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"description": "Set of requests that are purchasing items (multiple units of the same item and also different items) and the request to calling list of orders."
 		},
 		{
-			"name": "Paging",
+			"name": "Paging feature testsuite",
 			"item": [
 				{
 					"name": "PagingByPriceAsc",
