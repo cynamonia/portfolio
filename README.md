@@ -20,7 +20,7 @@ My name is Monika Łękawa. I am 5th year student of AGH University in Cracow �
 
 [Test cases in Gherkin](https://github.com/cynamonia/respol-sklep-gherkin)
 
-[Postman collection](https://github.com/cynamonia/portfolio/blob/main/RespolHPL%20API%20testing.postman_collection.json)
+[Postman collection](https://github.com/cynamonia/portfolio/blob/d65e29c62369b32d4a180ff135ef6de4d3b00dbe/RespolHPL%20API%20testing.postman_collection.json)
 
 [Simple UX/UI in Figma](https://www.figma.com/file/NEC3SKjTlGM8lvjmgpOCzc/Untitled?type=design&node-id=0%3A1&mode=design&t=K0mpwiXbGNZMC3zS-1)
 # Languages 💬
