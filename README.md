@@ -7,7 +7,7 @@ From the beginning of my master's studies I see my future in IT. Initially, I wa
 However, when I explored the issues of testing and QA work, I decided that this is the field I want to develop. So far I written test cases in Google Docs and also in Gherkin of [RespolHPL e-commerce](https://respolhpl-sklep.pl). I made the report of bugs on Jira and I written the test plan and test report in Google Docs. I made basic API automation tests in Postman. I also study a book: "Certyfikowany tester ISTQB. Poziom podstawowy" by Adam Roman and Lucjan Stapp.
 # Tools 🛠
 - Postman
-- SQL
+- PostgreSQL
 - Jira
 - Git
 - Gherkin
