@@ -22,7 +22,7 @@ However, when I explored the issues of testing and QA work, I decided that this 
 
 [Bugs report](https://docs.google.com/document/d/1Yk8m3P67lX47-z0N-UDBbCtPyitpnpixhf3T04R2rBA/edit)
 
-[Test report](https://docs.google.com/document/d/10ZMcqrl3MGtcbbIYhZu9EmGRi-nyrCau2kxEbl5meJ8/edit)
+[Test report](https://docs.google.com/document/d/1TCaJi_TvUCyPrwXSRYFAxiZEzSNc0_qMCeDuZnV_sK4/edit)
 
 [Postman collection](https://github.com/cynamonia/portfolio/blob/d65e29c62369b32d4a180ff135ef6de4d3b00dbe/RespolHPL%20API%20testing.postman_collection.json)
 
