@@ -18,7 +18,7 @@ However, when I explored the issues of testing and QA work, I decided that this 
 
 [Test cases](https://github.com/cynamonia/respol-sklep-gherkin)
 
-[Bugs report](https://docs.google.com/document/d/1Yk8m3P67lX47-z0N-UDBbCtPyitpnpixhf3T04R2rBA/edit)
+[Bug report](https://docs.google.com/document/d/18pCCevYuLpDqy68ciweajgdO-w_QMC_X9ZzNql0tJvw/edit)
 
 [Test report](https://docs.google.com/document/d/1TCaJi_TvUCyPrwXSRYFAxiZEzSNc0_qMCeDuZnV_sK4/edit)
 
