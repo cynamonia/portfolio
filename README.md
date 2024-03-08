@@ -16,9 +16,7 @@ However, when I explored the issues of testing and QA work, I decided that this 
 # Projects 👩‍💻
 [Test Plan](https://docs.google.com/document/d/1B5UJg4-eCPm_6FpWQuVMKrK1nj1P-xvUEhQpnnxnzgA/edit)
 
-[Test cases](https://docs.google.com/document/d/1GNS2NUHkVvs2CURZO5LNM7HQoLR9y5kLJKywAvSyENk/edit?usp=sharing)
-
-[Test cases in Gherkin](https://github.com/cynamonia/respol-sklep-gherkin)
+[Test cases](https://github.com/cynamonia/respol-sklep-gherkin)
 
 [Bugs report](https://docs.google.com/document/d/1Yk8m3P67lX47-z0N-UDBbCtPyitpnpixhf3T04R2rBA/edit)
 
