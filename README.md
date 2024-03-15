@@ -10,7 +10,7 @@ However, when I explored the issues of testing and QA work, I decided that this 
 - PostgreSQL
 - Jira
 - Git
-- Gherkin
+- Gherkin/BDD
 - TestRail
 - Figma
 # Projects 👩‍💻
