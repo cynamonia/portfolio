@@ -6,7 +6,7 @@ From the beginning of my master's studies I see my future in IT. Initially, I wa
 
 However, when I explored the issues of testing and QA work, I decided that this is the field I want to develop. So far I written test cases in Gherkin of [RespolHPL e-commerce](https://respolhpl-sklep.pl). I made the report of bugs on Jira and I written the test plan and test report in Google Docs. I made basic API automation tests in Postman. I study a book: "Certyfikowany tester ISTQB. Poziom podstawowy" by Adam Roman and Lucjan Stapp.
 
-Also I'm currently taking a PostgreSQL course on Udemy, where I am learning the basics of relational databases, writing queries for PostgreSQL databases, and how to modify and create simple tables and views. I am as well explored the non-functional testing area with performance, security and usability tests.
+Also I'm currently taking a PostgreSQL course on Udemy, where I am learning the basics of relational databases, writing queries for PostgreSQL databases, and how to modify and create simple tables and views. I am as well exploring the non-functional testing area with performance, security and usability tests.
 # Tools 🛠
 - Postman
 - PostgreSQL
