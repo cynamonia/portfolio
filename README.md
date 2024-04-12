@@ -55,6 +55,7 @@ Furthermore, I am currently enrolled in a PostgreSQL course on Udemy, where I am
 - Mobile Testing
 - Creating test cases
 - Reporting bugs
+- Exploratory Testing
 - SQL
 - REST/JSON
 - HTTP
