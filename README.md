@@ -48,17 +48,17 @@ Furthermore, I am currently enrolled in a PostgreSQL course on Udemy, where I am
 [ISTQB Syllabus](https://sjsi.org/ist-qb/do-pobrania/)
 
 # Tech skills ⚙️
-– Software Testing
-– Web Testing
-– Mobile Testing
-– Creating test cases
-– Reporting bugs
-– SQL
-– REST/JSON
-– HTTP
-– API Testing
-– SDLC
-– SCURM
+- Software Testing
+- Web Testing
+- Mobile Testing
+- Creating test cases
+- Reporting bugs
+- SQL
+- REST/JSON
+- HTTP
+- API Testing
+- SDLC
+- SCURM
 # Languages 💬
 - Polish native
 - English B2+
