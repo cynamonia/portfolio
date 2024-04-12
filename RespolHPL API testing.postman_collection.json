@@ -5,7 +5,7 @@
 		"description": "## Introduction\n\nRespolHPL is an e-commerce where you can buy laminates, compact laminates and kitchen accessories.\n\nDocumentation for REST API endpoints used in this collection can be found [here.](https://woocommerce.github.io/woocommerce-rest-api-docs/#)\n\nAll the requests referenced in the documentation start with [https://respolhpl-sklep.pl/wp-json/wc/v3](https://respolhpl-sklep.pl/wp-json/wc/v3)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "31698937",
-		"_collection_link": "https://orange-space-900441.postman.co/workspace/3bf00d99-3ba9-42bd-8b8c-3dcb6367414c/collection/31698937-58667e39-4420-4343-80f0-7d6ae46c4eec?action=share&source=collection_link&creator=31698937"
+		"_collection_link": "https://orange-space-900441.postman.co/workspace/respol-testowanie~3bf00d99-3ba9-42bd-8b8c-3dcb6367414c/collection/31698937-58667e39-4420-4343-80f0-7d6ae46c4eec?action=share&source=collection_link&creator=31698937"
 	},
 	"item": [
 		{
@@ -58,7 +58,7 @@
 					"response": []
 				},
 				{
-					"name": "GetAllCategories",
+					"name": "AllCategories",
 					"event": [
 						{
 							"listen": "test",
@@ -93,6 +93,40 @@
 					"response": []
 				},
 				{
+					"name": "NonExistingCategory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?category=0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "FilteringAkcesoriaGTV",
 					"request": {
 						"method": "GET",
@@ -116,6 +150,14 @@
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "ShippingClassForLaminats",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
@@ -173,6 +215,33 @@
 								{
 									"key": "orderby",
 									"value": "price"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InvalidOrderbyParam",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?order=asc&orderby=prise",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "orderby",
+									"value": "prise"
 								}
 							]
 						}
@@ -493,6 +562,107 @@
 					"response": []
 				},
 				{
+					"name": "NonExistingVariations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 1s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"});",
+									"pm.test(\"Response body is empty\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql([]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{API-secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{API-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products/0/variations",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"0",
+								"variations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NotAuthorizedRequest",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 1s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"});",
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products/924/variations",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"924",
+								"variations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "ProductDetails",
 					"event": [
 						{
@@ -533,6 +703,55 @@
 							"path": [
 								"products",
 								"1129"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NonExistingProduct",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 1s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+									"});",
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{API-secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{API-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products/0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products",
+								"0"
 							]
 						}
 					},
@@ -591,6 +810,124 @@
 								{
 									"key": "per_page",
 									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "InvalidOrderParam",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 5s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);",
+									"});",
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{API-secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{API-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?order=ascending",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "ascending"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TooManyProductsRequested",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 5s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(5000);",
+									"});",
+									"",
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"// todo wrong order, wrong category name"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{API-secret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{API-key}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/products?order=asc&orderby=price&per_page=200",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "orderby",
+									"value": "price"
+								},
+								{
+									"key": "per_page",
+									"value": "200"
 								}
 							]
 						}
@@ -834,14 +1171,6 @@
 								"1501"
 							]
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "New Request",
-					"request": {
-						"method": "GET",
-						"header": []
 					},
 					"response": []
 				}
