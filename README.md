@@ -2,7 +2,7 @@
 # About me 🙋‍♀️
 My name is Monika, and I'm a 5th-year student at AGH University in Krakow 👩‍🎓. I earned my bachelor's degree for a thesis on cognitive linguistics from the Jagiellonian University, Faculty of Polish Studies. Currently, I'm studying Visual Communication and Graphic Design at AGH University, Faculty of Cultural Studies.
 
-Since the beginning of my master's studies, I have envisioned my future in IT. Initially, I planned to develop my skills in the UX/UI field. During the first year of my master's studies, I designed a mobile application using Figma. I have included its initial outline in the 'My projects' section.
+Since the beginning of my master's studies, I have envisioned my future in IT. Initially, I planned to develop my skills in the UX/UI field. During the first year of my master's studies, I designed a mobile application using Figma. I have included its initial outline in the 'Projects' section.
 
 However, upon exploring the aspects of testing and QA work, I have decided that this is the field I want to pursue. So far I have written test cases in Gherkin for the [RespolHPL e-commerce](https://respolhpl-sklep.pl) platform. I have made the report of bugs on Jira and created the test plan and test report in Google Docs. Additionally, I have conducted basic API automation tests in Postman. I am currently studying the book 'Certyfikowany tester ISTQB. Poziom podstawowy' by Adam Roma, Lucjan Stapp and Michaël Pilaeten.
 
