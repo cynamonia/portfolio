@@ -33,12 +33,17 @@ Furthermore, I am currently enrolled in a PostgreSQL course on Udemy, where I am
 
 [Simple UX/UI in Figma](https://www.figma.com/file/NEC3SKjTlGM8lvjmgpOCzc/Untitled?type=design&node-id=0%3A1&mode=design&t=K0mpwiXbGNZMC3zS-1)
 # Courses 📚
-– [Dare IT Mentoring](https://www.dareit.io/mentoring)
-– [PostgreSQL Course](https://www.udemy.com/share/103RWg3@Q2JrY8RpRs2KvmaBXjHLMj8Id380CFi5GGFqKQ9rLLkpSqWGgdZ7V2zU00vXGhYm-A==/)
-– [Git Course](https://www.youtube.com/watch?v=8JJ101D3knE&t=2289s)
-– [Postman Course](https://www.youtube.com/watch?v=cGn_LTFCif0&list=PLhW3qG5bs-L9P22XSnRe4suiWL4acXG-g)
-– [API Web Services](https://www.youtube.com/playlist?list=PLhW3qG5bs-L9E2KV6vVdB-YTk-sRxmRAB)
-– [ISTQB Syllabus](https://sjsi.org/ist-qb/do-pobrania/)
+[Dare IT Mentoring](https://www.dareit.io/mentoring)
+
+[PostgreSQL Course](https://www.udemy.com/share/103RWg3@Q2JrY8RpRs2KvmaBXjHLMj8Id380CFi5GGFqKQ9rLLkpSqWGgdZ7V2zU00vXGhYm-A==/)
+
+[Git Course](https://www.youtube.com/watch?v=8JJ101D3knE&t=2289s)
+
+[Postman Course](https://www.youtube.com/watch?v=cGn_LTFCif0&list=PLhW3qG5bs-L9P22XSnRe4suiWL4acXG-g)
+
+[API Web Services](https://www.youtube.com/playlist?list=PLhW3qG5bs-L9E2KV6vVdB-YTk-sRxmRAB)
+
+[ISTQB Syllabus](https://sjsi.org/ist-qb/do-pobrania/)
 # Languages 💬
 - Polish native
 - English B2+
