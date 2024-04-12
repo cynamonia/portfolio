@@ -58,7 +58,7 @@ Furthermore, I am currently enrolled in a PostgreSQL course on Udemy, where I am
 - HTTP
 - API Testing
 - SDLC
-- SCURM
+- SCRUM
 # Languages 💬
 - Polish native
 - English B2+
