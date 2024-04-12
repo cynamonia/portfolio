@@ -43,6 +43,8 @@ Furthermore, I am currently enrolled in a PostgreSQL course on Udemy, where I am
 
 [API Web Services Course](https://www.youtube.com/playlist?list=PLhW3qG5bs-L9E2KV6vVdB-YTk-sRxmRAB)
 
+[BDD/Gherkin Documentation](https://cucumber.io/docs/gherkin/)
+
 [JBehave Course](https://jbehave.org/reference/stable/index.html)
 
 [ISTQB Syllabus](https://sjsi.org/ist-qb/do-pobrania/)
