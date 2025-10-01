@@ -1,9 +1,17 @@
 # Portfolio
 # About me 🙋‍♀️
 I am a QA Engineer with 2.5 years of experience in manual software testing. I have practical skills in creating, among others, test documentation, test cases, and bug reports.
+
+
 I hold the AWS Cloud Practitioner certification and have hands-on experience with Google Cloud. I continuously develop my competencies by participating in courses dedicated to QA engineers. Currently, I am expanding my knowledge by learning the basics of automated testing in JavaScript.
+
+
 In my work, I apply knowledge of software testing principles gained both through the ISTQB syllabus and practical testing experience. I also learn from the experience of senior team members, constantly deepening my knowledge and broadening my skill set. On a daily basis, I use various types of tests and test design techniques, adapting them to project requirements and client expectations.
+
+
 I closely collaborate with developers and clients at all stages of the software development process, ensuring the high quality of the final product.
+
+
 I also completed the Dare IT Mentoring Program as a QA & Manual Tester Mentee.
 # Tools 🛠
 - Postman
