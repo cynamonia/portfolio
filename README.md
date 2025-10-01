@@ -17,12 +17,14 @@ I also completed the Dare IT Mentoring Program as a QA & Manual Tester Mentee.
 - Postman
 - SQL
 - Git
+- Cloude computing
+- AWS
+- GCP
 - Cucumber
 - Gherkin
 - BDD
 - Charles
 - Chrome DevTools
-- AWS
 - Jira
 - Confluence
 - Xray
